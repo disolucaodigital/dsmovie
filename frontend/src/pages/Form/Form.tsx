@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styless.css';
 
 const movie = {
@@ -9,7 +10,7 @@ const movie = {
 };
 
 function Form() {
-    return(
+    return (
         <div className="dsmovie-form-container">
             <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
             <div className="dsmovie-card-bottom-container">
@@ -33,7 +34,9 @@ function Form() {
                         <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
                     </div>
                 </form >
-                <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+                <Link to="/">
+                    <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+                </Link>
             </div >
         </div >
     );
